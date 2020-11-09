@@ -1,14 +1,15 @@
 # Dell XPS 9500 Hackintosh
 
-| Specification       | Details                                 |
-| ------------------- | --------------------------------------- |
-| Model               | Dell XPS 9500                           |
-| Processor           | Intel Core i7-10750H                    |
-| Integrated Graphics | Intel UHD Graphics 630                  |
-| Memory              | 16GB RAM & 256GB SSD                    |
-| Sound Card          | Conexant CX8200                         |
-| Wireless Card       | Intel(R) Dual Band Wireless-AC 8265     |
-| SD Card Reader      | Realtek RTS522A PCI Express Card Reader |
+| Specification       | Details                           |
+| ------------------- | --------------------------------- |
+| Model               | Dell XPS 9500 P91F001             |
+| Processor           | Intel Core i7-10750H              |
+| Integrated Graphics | Intel UHD Graphics 630            |
+| RAM                 | 16GB DDR4-2933MHz, 2x8G           |
+| Storage             | Western Digital PC SN530 NVMe SSD |
+| Sound Card          | Realtek ALC???                    |
+| Wireless Card       | Killer(R) Wi-Fi 6 AX1650          |
+| SD Card Reader      | ???                               |
 
 #### Instructions
 

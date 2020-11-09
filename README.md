@@ -5,9 +5,10 @@
 | Model               | Dell XPS 9500 P91F001             |
 | Processor           | Intel Core i7-10750H              |
 | Integrated Graphics | Intel UHD Graphics 630            |
+| Discrete Graphics   | NVIDIA GeForce GTX 1650 Ti        |
 | RAM                 | 16GB DDR4-2933MHz, 2x8G           |
 | Storage             | Western Digital PC SN530 NVMe SSD |
-| Sound Card          | Realtek ALC???                    |
+| Sound Card          | Realtek ALC3281                   |
 | Wireless Card       | Killer(R) Wi-Fi 6 AX1650          |
 | SD Card Reader      | ???                               |
 

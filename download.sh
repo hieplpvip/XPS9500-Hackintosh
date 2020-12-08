@@ -1,6 +1,6 @@
 #!/bin/bash
 
-oc_version="0.6.3"
+oc_version="0.6.4"
 
 curl_options="--retry 5 --location --progress-bar"
 curl_options_silent="--retry 5 --location --silent"
@@ -12,8 +12,8 @@ function download_github()
 # $3 is file name to rename to
 {
     echo "downloading `basename $3 .zip`:"
-    curl $curl_options_silent --output /tmp/com.hieplpvip.download.txt "https://github.com/$1/releases/latest"
-    local url=https://github.com`grep -o -m 1 "\"/$1/releases/.*$2.*\.zip\"" /tmp/com.hieplpvip.download.txt | cut -c2- | rev | cut -c2- | rev`
+    curl $curl_options_silent --output /tmp/com.hieplpvip.download.txt "https://github.com/$1/releases"
+    local url=https://github.com`grep -o -m 1 "/.*$2.*\.zip" /tmp/com.hieplpvip.download.txt`
     echo $url
     curl $curl_options --output "$3" "$url"
     rm /tmp/com.hieplpvip.download.txt
@@ -62,7 +62,7 @@ download_github "acidanthera/NVMeFix" "RELEASE" "acidanthera-NVMeFix.zip"
 download_github "acidanthera/VirtualSMC" "RELEASE" "acidanthera-VirtualSMC.zip"
 download_github "acidanthera/VoodooPS2" "RELEASE" "acidanthera-VoodooPS2.zip"
 download_github "acidanthera/WhateverGreen" "RELEASE" "acidanthera-WhateverGreen.zip"
-download_github "OpenIntelWireless/itlwm" "AirportItlwm.*Catalina" "OpenIntelWireless-AirportItlwm.zip"
+download_github "OpenIntelWireless/itlwm" "AirportItlwm-Big_Sur" "OpenIntelWireless-AirportItlwm.zip"
 download_github "OpenIntelWireless/IntelBluetoothFirmware" "IntelBluetooth" "OpenIntelWireless-IntelBluetoothFirmware.zip"
 download_github "hieplpvip/AppleBacklightSmoother" "RELEASE" "hieplpvip-AppleBacklightSmoother.zip"
 download_github "VoodooI2C/VoodooI2C" "VoodooI2C-" "alexandred-VoodooI2C.zip"

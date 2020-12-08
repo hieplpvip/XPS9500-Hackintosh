@@ -5,7 +5,7 @@
 	<key>#Comment</key>
 	<string>This config is created by @hieplpvip for Dell XPS 9500</string>
 	<key>#OCVersion</key>
-	<string>0.6.3</string>
+	<string>0.6.4</string>
 	<key>ACPI</key>
 	<dict>
 		<key>Add</key>
@@ -799,7 +799,7 @@
 		<key>Debug</key>
 		<dict>
 			<key>AppleDebug</key>
-			<false/>
+			<true/>
 			<key>ApplePanic</key>
 			<true/>
 			<key>DisableWatchDog</key>
@@ -807,13 +807,13 @@
 			<key>DisplayDelay</key>
 			<integer>0</integer>
 			<key>DisplayLevel</key>
-			<integer>0</integer>
+			<integer>2147483714</integer>
 			<key>SerialInit</key>
 			<false/>
 			<key>SysReport</key>
 			<false/>
 			<key>Target</key>
-			<integer>0</integer>
+			<integer>83</integer>
 		</dict>
 		<key>Entries</key>
 		<array/>

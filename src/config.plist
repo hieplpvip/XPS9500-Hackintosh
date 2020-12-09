@@ -766,6 +766,24 @@
 				<key>Arch</key>
 				<string>x86_64</string>
 				<key>BundlePath</key>
+				<string>MacMSRDriver.kext</string>
+				<key>Comment</key>
+				<string></string>
+				<key>Enabled</key>
+				<true/>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/MacMSRDriver</string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string>12.0.0</string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>Arch</key>
+				<string>x86_64</string>
+				<key>BundlePath</key>
 				<string>USBMap.kext</string>
 				<key>Comment</key>
 				<string></string>
@@ -931,7 +949,36 @@
 			<string>Optional</string>
 		</dict>
 		<key>Tools</key>
-		<array/>
+		<array>
+			<dict>
+				<key>Arguments</key>
+				<string></string>
+				<key>Auxiliary</key>
+				<true/>
+				<key>Comment</key>
+				<string></string>
+				<key>Enabled</key>
+				<true/>
+				<key>Name</key>
+				<string>modGRUBShell</string>
+				<key>Path</key>
+				<string>modGRUBShell.efi</string>
+			</dict>
+			<dict>
+				<key>Arguments</key>
+				<string></string>
+				<key>Auxiliary</key>
+				<true/>
+				<key>Comment</key>
+				<string></string>
+				<key>Enabled</key>
+				<true/>
+				<key>Name</key>
+				<string>VerifyMsrE2</string>
+				<key>Path</key>
+				<string>VerifyMsrE2.efi</string>
+			</dict>
+		</array>
 	</dict>
 	<key>NVRAM</key>
 	<dict>
@@ -954,7 +1001,7 @@
 				<key>SystemAudioVolume</key>
 				<data>Rg==</data>
 				<key>boot-args</key>
-				<string>-v keepsyms=1 igfxfw=2 igfxcflbklt=0</string>
+				<string>-wegnogpu keepsyms=1 igfxfw=2 igfxcflbklt=0</string>
 				<key>run-efi-updater</key>
 				<string>No</string>
 				<key>csr-active-config</key>
@@ -977,7 +1024,6 @@
 			<key>7C436110-AB2A-4BBB-A880-FE41995C9F82</key>
 			<array>
 				<string>boot-args</string>
-				<string>csr-active-config</string>
 			</array>
 		</dict>
 		<key>LegacyEnable</key>

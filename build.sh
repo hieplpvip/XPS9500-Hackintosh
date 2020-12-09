@@ -53,4 +53,7 @@ find $OCFOLDER/Drivers ! -name AudioDxe.efi \
                        ! -name OpenRuntime.efi -type f -delete
 
 # Remove unused UEFI Tools
-rm -rf $OCFOLDER/Tools
+find $OCFOLDER/Tools ! -name VerifyMsrE2.efi -type f -delete
+
+# Copy UEFI tools
+cp -R src/Tools/* $OCFOLDER/Tools/

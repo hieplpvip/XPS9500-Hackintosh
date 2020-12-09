@@ -47,7 +47,7 @@ cd ./download
 
 # download OpenCore
 mkdir ./oc && cd ./oc
-download_github "acidanthera/OpenCorePkg" "$oc_version-DEBUG" "OpenCorePkg.zip"
+download_github "acidanthera/OpenCorePkg" "$oc_version-RELEASE" "OpenCorePkg.zip"
 unzip -q -d OpenCorePkg OpenCorePkg.zip
 cd ..
 
@@ -55,6 +55,7 @@ cd ..
 mkdir ./zips && cd ./zips
 download_github "acidanthera/Lilu" "RELEASE" "acidanthera-Lilu.zip"
 download_github "acidanthera/AppleALC" "RELEASE" "acidanthera-AppleALC.zip"
+download_github "acidanthera/BrightnessKeys" "RELEASE" "acidanthera-BrightnessKeys.zip"
 download_github "acidanthera/CPUFriend" "RELEASE" "acidanthera-CPUFriend.zip"
 download_github "acidanthera/CpuTscSync" "RELEASE" "acidanthera-CpuTscSync.zip"
 download_github "acidanthera/HibernationFixup" "RELEASE" "acidanthera-HibernationFixup.zip"
@@ -65,8 +66,7 @@ download_github "acidanthera/WhateverGreen" "RELEASE" "acidanthera-WhateverGreen
 download_github "OpenIntelWireless/itlwm" "AirportItlwm-Big_Sur" "OpenIntelWireless-AirportItlwm.zip"
 download_github "OpenIntelWireless/IntelBluetoothFirmware" "IntelBluetooth" "OpenIntelWireless-IntelBluetoothFirmware.zip"
 download_github "hieplpvip/AppleBacklightSmoother" "RELEASE" "hieplpvip-AppleBacklightSmoother.zip"
-download_github "VoodooI2C/VoodooI2C" "VoodooI2C-" "alexandred-VoodooI2C.zip"
-download_github "al3xtjames/NoTouchID" "RELEASE" "al3xtjames-NoTouchID.zip"
+download_github "VoodooI2C/VoodooI2C" "VoodooI2C-2.4.4" "alexandred-VoodooI2C.zip"
 download_github "cholonam/Sinetek-rtsx" "Sinetek-rtsx-" "cholonam-Sinetek-rtsx.zip"
 cd ..
 
@@ -75,11 +75,11 @@ mkdir ./drivers && cd ./drivers
 download_raw https://github.com/acidanthera/OcBinaryData/raw/master/Drivers/HfsPlus.efi HfsPlus.efi
 cd ..
 
-KEXTS="Lilu|AppleALC|AppleBacklightSmoother|CPUFriend|CpuTscSync|IntelBluetooth|Itlwm|NVMeFix|WhateverGreen|VirtualSMC|SMCBatteryManager|SMCDellSensor|SMCLightSensor|SMCProcessor|VoodooPS2Controller|VoodooI2C.kext|VoodooI2CHID|Sinetek-rtsx|Fixup"
+KEXTS="Lilu|AppleALC|AppleBacklightSmoother|BrightnessKeys|CPUFriend|CpuTscSync|IntelBluetooth|Itlwm|NVMeFix|WhateverGreen|VirtualSMC|SMCBatteryManager|SMCDellSensor|SMCLightSensor|SMCProcessor|VoodooPS2Controller|VoodooI2C.kext|VoodooI2CHID|Sinetek-rtsx|Fixup"
 
 function check_directory
 {
-    for x in $1; do
+    for x in "$1"; do
         if [ -e "$x" ]; then
             return 1
         else
@@ -119,12 +119,12 @@ function unzip_kext
             fi
         done
     fi
-    check_directory $out/Catalina/*.kext
+    check_directory $out/"Big Sur"/*.kext
     if [ $? -ne 0 ]; then
-        for kext in $out/Catalina/*.kext; do
-            kextname="`basename $kext`"
+        for kext in $out/"Big Sur"/*.kext; do
+            kextname=`basename "$kext"`
             if [[ "`echo $kextname | grep -E $KEXTS`" != "" ]]; then
-                cp -R $kext ../kexts
+                cp -R "$kext" ../kexts
             fi
         done
     fi

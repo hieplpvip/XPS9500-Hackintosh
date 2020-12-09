@@ -1,16 +1,16 @@
 # Dell XPS 9500 Hackintosh
 
-| Specification       | Details                           |
-| ------------------- | --------------------------------- |
-| Model               | Dell XPS 9500 P91F001             |
-| Processor           | Intel Core i7-10750H              |
-| Integrated Graphics | Intel UHD Graphics 630            |
-| Discrete Graphics   | NVIDIA GeForce GTX 1650 Ti        |
-| RAM                 | 16GB DDR4-2933MHz, 2x8G           |
-| Storage             | Western Digital PC SN530 NVMe SSD |
-| Sound Card          | Realtek ALC3281                   |
-| Wireless Card       | Killer(R) Wi-Fi 6 AX1650          |
-| SD Card Reader      | ???                               |
+| Specification       | Details                            |
+| ------------------- | ---------------------------------- |
+| Model               | Dell XPS 9500 P91F001              |
+| Processor           | Intel Core i7-10750H               |
+| Integrated Graphics | Intel UHD Graphics 630             |
+| Discrete Graphics   | NVIDIA GeForce GTX 1650 Ti         |
+| RAM                 | 16GB DDR4-2933MHz, 2x8G            |
+| Storage             | Western Digital PC SN530 NVMe SSD  |
+| Sound Card          | Realtek ALC3281 (ALC289 rebranded) |
+| Wireless Card       | Killer(R) Wi-Fi 6 AX1650           |
+| SD Card Reader      | ???                                |
 
 #### Instructions
 
@@ -20,4 +20,4 @@
 
 #### Notes
 
-- `download.sh` will download Catalina version of `AirportItlwm`. If you use Big Sur, you need to manually download Big Sur version.
+- `download.sh` will download Big Sur version of `AirportItlwm`. If you use Catalina, you need to manually download Catalina version.

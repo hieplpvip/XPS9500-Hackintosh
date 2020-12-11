@@ -79,6 +79,10 @@ sudo pmset -a sleep 0; sudo pmset -a hibernatemode 0; sudo pmset -a disablesleep
 
 This way, sleep can be stay enabled on BIOS settings so other OS can still use it.
 
+#### Enable HiDPI
+
+Use [one-key-hidpi](https://github.com/xzhih/one-key-hidpi) (3000x2000 Display).
+
 #### Brightness Hotkeys
 
 The BRT6 patch used by previous Dell XPS models isn't working on the XPS 9500. However, fn+S and fn+B hotkeys are functioning in place of the original fn+F6 and fn+F7.

@@ -57,6 +57,7 @@ Run macOS on your XPS9500 with OpenCore
 
 #### Unlock CFG
 
+- Set `ShowPicker` to `true` and `Timeout` to a positive integer.
 - Boot from the USB. Select `modGRUBShell` at OpenCore boot menu.
 - Enter the following commands:
 

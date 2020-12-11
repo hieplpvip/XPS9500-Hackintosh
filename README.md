@@ -3,6 +3,7 @@
 Run macOS on your XPS9500 with OpenCore
 
 <b>OpenCore Version:</b> 0.6.4
+
 <b>macOS Version:</b> Big Sur 11.0.1
 
 ## Specification

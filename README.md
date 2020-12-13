@@ -18,7 +18,7 @@ Run macOS on your XPS9500 with OpenCore
 | Storage             | Western Digital PC SN530 NVMe SSD  |
 | Sound Card          | Realtek ALC3281 (ALC289 rebranded) |
 | Wireless Card       | Killer(R) Wi-Fi 6 AX1650           |
-| SD Card Reader      | ???                                |
+| SD Card Reader      | Realtek RTS5260 PCI-E Card Reader  |
 
 ## Functional Status
 

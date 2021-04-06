@@ -1,6 +1,6 @@
 #!/bin/bash
 
-oc_version="0.6.4"
+oc_version="0.6.8"
 
 curl_options="--retry 5 --location --progress-bar"
 curl_options_silent="--retry 5 --location --silent"
@@ -65,7 +65,6 @@ download_github "acidanthera/VoodooPS2" "RELEASE" "acidanthera-VoodooPS2.zip"
 download_github "acidanthera/WhateverGreen" "RELEASE" "acidanthera-WhateverGreen.zip"
 download_github "OpenIntelWireless/itlwm" "AirportItlwm-Big_Sur" "OpenIntelWireless-AirportItlwm.zip"
 download_github "OpenIntelWireless/IntelBluetoothFirmware" "IntelBluetooth" "OpenIntelWireless-IntelBluetoothFirmware.zip"
-download_github "hieplpvip/AppleBacklightSmoother" "RELEASE" "hieplpvip-AppleBacklightSmoother.zip"
 download_github "VoodooI2C/VoodooI2C" "VoodooI2C-2.4.4" "alexandred-VoodooI2C.zip"
 download_github "cholonam/Sinetek-rtsx" "Sinetek-rtsx-" "cholonam-Sinetek-rtsx.zip"
 cd ..
